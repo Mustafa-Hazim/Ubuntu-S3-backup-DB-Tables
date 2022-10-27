@@ -7,7 +7,8 @@ export async function uploadFile(bucket, path, content) {
     const bucketParams = {
         Bucket: bucket,
         Key: path,
-        Body: content
+        Body: content,
+	ContentType: 'application/json'
     };
 
     try {
